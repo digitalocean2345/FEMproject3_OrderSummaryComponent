@@ -1,0 +1,150 @@
+
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);   
+}
+
+
+/* normalize by setting border and padding to 0 */
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font size 62.5% would mean 1rem = 10px */
+html{
+    font-family: "Red Hat Display",sans-serif;
+    font-size: 62.5%;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+p{
+    font-size: 1.6rem;
+    
+}
+
+body{
+    background: url(./images/pattern-background-desktop.svg),var(--pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+@media (max-width: 450px) {
+
+    body {
+      background: url(./images/pattern-background-mobile.svg), var(--pale-blue);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+}
+
+/* Card */
+.card{
+    width: 37.5rem;
+    margin: 8rem auto;
+    border-radius: 20px;
+    background-color: var(--very-pale-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-image{
+    display: block;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.card-body{
+    text-align: center;
+    padding: 4rem;
+}
+
+/* Annual plan detail section*/
+.plan-holder{
+    display: flex;
+    background-color: var(--very-pale-blue);
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    
+}
+.music-icon{
+    height: 3.5rem;
+}
+.plan-holder h2{
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.plan-rate{
+    display: block;
+    font-weight: 500;
+}
+
+.plan-anchor{
+    margin-left: auto;
+    font-size: 15px;
+}
+.plan-anchor:hover{
+    text-decoration: none;
+}
+/* Button section*/
+.button-holder{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+}
+.btn {
+    all: unset;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 4rem;
+  }
+  .btn:focus {
+    /* Provide a fallback style for browsers
+       that don't support :focus-visible */
+    outline: 3px dashed var(--very-pale-blue);
+  }
+
+
+  .btn-payment{
+    background-color: var(--bright-blue);
+    color: white;
+    box-shadow: 0 5px 8px 0 hsla(245, 75%, 52%, .25);
+    transition: all .2s ease;
+    opacity: 1;
+}
+.btn-payment:hover{
+    opacity: 0.8;
+}
+.btn-cancel{
+    background-color: var(--very-pale-blue);
+    color: var(--desaturated-blue);
+}
+
+.btn-cancel:hover{
+    color: var(--dark-blue);
+}
+
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+
+
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
